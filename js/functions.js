@@ -10,38 +10,67 @@ function howmany(){
     }
 }
 
-var db = firebase.firestore();
+function lab1Solution() {
+    var score = 0;
 
-function send() {
-    alert("adding data");
-    var first_name = document.getElementById("firstName").value;
-    var last_name = document.getElementById("lastName").value;
-    var query = document.getElementById("comments").value;
-    var e_mail = document.getElementById("emails").value;
-    db.collection("contact").add({
-        comment: query,
-        email: e_mail,
-        fName: first_name,
-        lName: last_name
-    }).then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        //update the products view
-        getProducts();
-    }).catch(function (error) {
-        console.error("Error adding document: ", error);
-    });
-    alert('Information Sent to Freys Database.')
+    if (document.getElementById("Q1D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q2D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q3A").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q4D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q5B").checked) {
+        score++
+    }
+
+    console.log(score);
+
+    alert("You scored \n" + score + " / " + 5);
 }
 
 
-var productdisplay = document.getElementById('products');
-productdisplay.innerHTML = "";var db = firebase.firestore();
-db.collection("game").get().then((querySnapshot) =>{
+// var db = firebase.firestore();
 
-    alert("Data Recieved");
-    productdisplay.innerHTML = "";
-    querySnapshot.forEach((doc) => {
-        productdisplay.innerHTML += (doc.data().productName + " " + doc.data().productPrice + " "
-            + "<img src='images/" + doc.data().productImage + "'>" +"<br>");
-    });
-});
+// function send() {
+//     alert("adding data");
+//     var first_name = document.getElementById("firstName").value;
+//     var last_name = document.getElementById("lastName").value;
+//     var query = document.getElementById("comments").value;
+//     var e_mail = document.getElementById("emails").value;
+//     db.collection("contact").add({
+//         comment: query,
+//         email: e_mail,
+//         fName: first_name,
+//         lName: last_name
+//     }).then(function (docRef) {
+//         console.log("Document written with ID: ", docRef.id);
+//         //update the products view
+//         getProducts();
+//     }).catch(function (error) {
+//         console.error("Error adding document: ", error);
+//     });
+//     alert('Information Sent to Freys Database.')
+// }
+
+
+// var productdisplay = document.getElementById('products');
+// productdisplay.innerHTML = "";var db = firebase.firestore();
+// db.collection("game").get().then((querySnapshot) =>{
+
+//     alert("Data Recieved");
+//     productdisplay.innerHTML = "";
+//     querySnapshot.forEach((doc) => {
+//         productdisplay.innerHTML += (doc.data().productName + " " + doc.data().productPrice + " "
+//             + "<img src='images/" + doc.data().productImage + "'>" +"<br>");
+//     });
+// });

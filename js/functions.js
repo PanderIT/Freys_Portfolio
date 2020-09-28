@@ -41,15 +41,20 @@ function lab1Solution() {
 function lab2Solution() {
 
     let x = parseInt(document.getElementById("numberInput").value);
-    let letter = String.fromCharCode(64 + x)
-    
+    let letter = String.fromCharCode(64 + x);
+
     if (isNaN(x) || x < 1 || x > 26) {
-        alert("Invalid input, please enter a number from 1 - 26!~")
-        return
-    } 
+        alert("Invalid input, please enter a number from 1 - 26!~");
+        return;
+    }
     
+    for (var i = 1; i <= x; i++) {
+        console.log(i);
+        console.log(String.fromCharCode(64 + i));
+    }
+
     console.log(x);
-    console.log(letter)
+    console.log(letter);
 }
 
 

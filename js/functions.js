@@ -39,7 +39,8 @@ function lab1Solution() {
 }
 
 function lab2Solution() {
-    console.log("Hello World");
+
+    console.log(document.getElementById("numberInput").innerHTML);
 }
 
 

@@ -39,7 +39,7 @@ function lab1Solution() {
 }
 
 function lab2Solution() {
-    let x = document.getElementById("numberInput").innerText;
+    let x = document.getElementById("lab2button").innerText;
     console.log(x);
 }
 

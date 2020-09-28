@@ -39,7 +39,7 @@ function lab1Solution() {
 }
 
 function lab2Solution() {
-    alert("Hello World");
+    console.log("Hello World");
 }
 
 

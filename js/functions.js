@@ -39,7 +39,16 @@ function lab1Solution() {
 }
 
 function lab2Solution() {
-    let x = parseInt(document.getElementById("numberInput").value);
+    try {
+        let x = parseInt(document.getElementById("numberInput").value);
+        if (x == NaN) {
+            throw TypeError
+        }
+      }
+      catch(err) {
+        alert("Invalid input, please enter a number from 1 - 26!~")
+      }
+    
     console.log(x);
 }
 

@@ -39,7 +39,7 @@ function lab1Solution() {
 }
 
 function lab2Solution() {
-    let x = document.getElementById("numberInput").value;
+    let x = parseInt(document.getElementById("numberInput").value);
     console.log(x);
 }
 

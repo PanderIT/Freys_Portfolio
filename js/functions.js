@@ -40,7 +40,7 @@ function lab1Solution() {
 
 function lab2Solution() {
 
-    console.log(document.getElementById("numberInput").innerHTML);
+    console.log(document.getElementById("numberInput").textContent);
 }
 
 

@@ -38,6 +38,10 @@ function lab1Solution() {
     alert("You scored \n" + score + " / " + 5);
 }
 
+function lab2Solution() {
+    alert("Hello World");
+}
+
 
 // var db = firebase.firestore();
 

@@ -75,9 +75,9 @@ function lab2Reset() {
     var lab2 = document.getElementById("lab2");
 
     var buttons = document.getElementById("buttons");
-    buttons.remove(0);
-    buttons = document.createElement("div");
-    buttons.setAttribute("class", "col-12 narrow text-center");
+    while (buttons.firstChild) {
+        buttons.removeChild(buttons.lastChild);
+    }
 
     lab2.appendChild(buttons);
 }

@@ -48,7 +48,10 @@ function lab2Solution() {
         return;
     }  
 
-    lab2Reset();
+    var buttons = document.getElementById("buttons");
+    while (buttons.firstChild) {
+        buttons.removeChild(buttons.lastChild);
+    }
 
     for (var i = 1; i <= x; i++) {
 
@@ -68,18 +71,6 @@ function addButton(letter) {
     var buttons = document.getElementById("buttons");
     //Append the element in page (in span).  
     buttons.appendChild(element);
-}
-
-function lab2Reset() {
-
-    var lab2 = document.getElementById("lab2");
-
-    var buttons = document.getElementById("buttons");
-    while (buttons.firstChild) {
-        buttons.removeChild(buttons.lastChild);
-    }
-
-    lab2.appendChild(buttons);
 }
 
 

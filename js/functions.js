@@ -53,7 +53,7 @@ function generateButtons() {
         buttons.removeChild(buttons.lastChild);
     }
 
-    for (var i = 1; i <= x; i++) {
+    for (let i = 1; i <= x; i++) {
 
         addButton(String.fromCharCode(64 + i))
     }
@@ -75,6 +75,22 @@ function addButton(letter) {
     //Append the element in page (in span).  
     buttons.appendChild(element);
 }
+
+class Recipe {
+    constructor(title, servings, ingredients = []) {
+        this.title = title;
+        this.servings = servings;
+        this.ingredients = ingredients;
+
+        print()
+    }
+
+    print() {
+        document.getElementById("title").textContent = `Title: ${title}`;
+        document.getElementById("servings").textContent = `Servings: ${servings}`;
+        document.getElementById("ingredients").textContent = `ingredients: ${ingredients}`;
+    }
+  }
 
 
 // var db = firebase.firestore();

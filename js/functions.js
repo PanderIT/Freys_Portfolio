@@ -48,6 +48,9 @@ function lab2Solution() {
         return;
     }
     
+    var buttons = document.getElementById("buttons");
+    buttons.remove(0);
+
     for (var i = 1; i <= x; i++) {
 
         addButton(String.fromCharCode(64 + i))

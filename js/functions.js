@@ -87,15 +87,21 @@ class Recipe {
 
     print() {
         let recipes = document.getElementById("recipes");
+        
         let element = document.createElement("p");
         element.textContent = `Title: ${this.title}`;
         recipes.appendChild(element)
+
+        let element = document.createElement("p");
         element.textContent = `Serves: ${this.servings}`;
         recipes.appendChild(element)
+
+        let element = document.createElement("p");
         element.textContent = `Ingredients:`
         recipes.appendChild(element)
 
         for (let i = 0; i < this.ingredients.length; i++) {
+            let element = document.createElement("p");
             element.textContent = `${this.ingredients[i]}`
             recipes.appendChild(element)
         }

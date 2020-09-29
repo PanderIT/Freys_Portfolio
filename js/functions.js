@@ -38,7 +38,7 @@ function lab1Solution() {
     alert("You scored \n" + score + " / " + 5);
 }
 
-function lab2Solution() {
+function generateButtons() {
 
     let x = parseInt(document.getElementById("numberInput").value);
     let letter = String.fromCharCode(64 + x);
@@ -48,7 +48,7 @@ function lab2Solution() {
         return;
     }  
 
-    var buttons = document.getElementById("buttons");
+    let buttons = document.getElementById("buttons");
     while (buttons.firstChild) {
         buttons.removeChild(buttons.lastChild);
     }
@@ -61,7 +61,7 @@ function lab2Solution() {
 
 function addButton(letter) {
     //Create an input type dynamically.   
-    var element = document.createElement("button");
+    let element = document.createElement("button");
     //Assign different attributes to the element. 
     element.textContent = letter
     element.setAttribute("value", letter);
@@ -70,7 +70,7 @@ function addButton(letter) {
     element.setAttribute("class", "btn btn-secondary btn-lg")
     element.setAttribute("onclick", "console.log(`Button ${letter} was clicked`)");
 
-    var buttons = document.getElementById("buttons");
+    let buttons = document.getElementById("buttons");
     //Append the element in page (in span).  
     buttons.appendChild(element);
 }

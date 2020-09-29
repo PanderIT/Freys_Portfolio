@@ -89,16 +89,16 @@ class Recipe {
         let recipes = document.getElementById("recipes");
 
         let title = document.createElement("p");
-        element.textContent = `Title: ${this.title}`;
-        recipes.appendChild(element)
+        title.textContent = `Title: ${this.title}`;
+        recipes.appendChild(title)
 
         let servings = document.createElement("p");
-        element.textContent = `Serves: ${this.servings}`;
-        recipes.appendChild(element)
+        servings.textContent = `Serves: ${this.servings}`;
+        recipes.appendChild(servings)
 
         let ingredients = document.createElement("p");
-        element.textContent = `Ingredients:`
-        recipes.appendChild(element)
+        ingredients.textContent = `Ingredients:`
+        recipes.appendChild(ingredients)
 
         for (let i = 0; i < this.ingredients.length; i++) {
             let element = document.createElement("p");

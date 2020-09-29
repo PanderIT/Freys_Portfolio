@@ -86,9 +86,9 @@ class Recipe {
     }
 
     print() {
-        document.getElementById("title").textContent = `Title: ${title}`;
-        document.getElementById("servings").textContent = `Servings: ${servings}`;
-        document.getElementById("ingredients").textContent = `ingredients: ${ingredients}`;
+        document.getElementById("title").textContent = `Title: ${this.title}`;
+        document.getElementById("servings").textContent = `Servings: ${this.servings}`;
+        document.getElementById("ingredients").textContent = `Ingredients: ${this.ingredients}`;
     }
   }
 

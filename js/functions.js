@@ -69,7 +69,7 @@ function addButton(letter) {
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
     element.setAttribute("class", "btn btn-secondary btn-lg")
-    element.setAttribute("onclick", "console.log('Button ${this.textContent} was clicked.')");
+    element.setAttribute("onclick", "console.log(`Button ${this.textContent} was clicked.`)");
 
     let buttons = document.getElementById("buttons");
     //Append the element in page (in span).  

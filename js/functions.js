@@ -63,6 +63,7 @@ function addButton(letter) {
     //Create an input type dynamically.   
     var element = document.createElement("button");
     //Assign different attributes to the element. 
+    element.textContent = letter
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);

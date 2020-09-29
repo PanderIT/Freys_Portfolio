@@ -46,10 +46,9 @@ function lab2Solution() {
     if (isNaN(x) || x < 1 || x > 26) {
         alert("Invalid input, please enter a number from 1 - 26!~");
         return;
-    }
-    
-    var buttons = document.getElementById("buttons");
-    buttons.remove(0);
+    }  
+
+    lab2Reset();
 
     for (var i = 1; i <= x; i++) {
 
@@ -69,6 +68,18 @@ function addButton(letter) {
     var buttons = document.getElementById("buttons");
     //Append the element in page (in span).  
     buttons.appendChild(element);
+}
+
+function lab2Reset() {
+
+    var lab2 = document.getElementById("lab2");
+
+    var buttons = document.getElementById("buttons");
+    buttons.remove();
+    buttons = document.createElement("div");
+    buttons.setAttribute("class", "col-12 narrow text-center")
+
+    lab2.appendChild(buttons)
 }
 
 

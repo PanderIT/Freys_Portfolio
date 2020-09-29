@@ -82,7 +82,7 @@ class Recipe {
         this.servings = servings;
         this.ingredients = ingredients;
 
-        print()
+        this.print()
     }
 
     print() {

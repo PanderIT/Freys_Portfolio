@@ -67,7 +67,7 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("class", "btn btn-secondary btn-xs")
+    element.setAttribute("class", "btn btn-secondary btn-lg")
     element.setAttribute("onclick", console.log(`Button ${letter} was clicked`));
 
     var buttons = document.getElementById("buttons");

@@ -49,12 +49,22 @@ function lab2Solution() {
     }
     
     for (var i = 1; i <= x; i++) {
-        console.log(i);
-        console.log(String.fromCharCode(64 + i));
-    }
 
-    console.log(x);
-    console.log(letter);
+        addButton(String.fromCharCode(64 + i))
+    }
+}
+
+function addButton(letter) {
+    //Create an input type dynamically.   
+    var element = document.createElement("input");
+    //Assign different attributes to the element. 
+    element.setAttribute("value", letter);
+    element.setAttribute("name", letter);
+    element.setAttribute("onclick", alert(letter));
+
+    var buttons = document.getElementById("buttons");
+    //Append the element in page (in span).  
+    buttons.appendChild(element);
 }
 
 

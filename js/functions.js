@@ -110,7 +110,7 @@ class Recipe {
 
 function getTime() {
     let xhttp = new XMLHttpRequest();
-    let str = document.getElementById("numberInput").value;
+    let str = document.getElementById("nameInput").value;
     xhttp.open("GET", "http://localhost:8888/?name=" + str, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {

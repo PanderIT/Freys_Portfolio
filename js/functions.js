@@ -111,7 +111,7 @@ class Recipe {
 function getTime() {
     let xhttp = new XMLHttpRequest();
     let str = document.getElementById("nameInput").value;
-    xhttp.open("GET", "http://localhost:8888/?name=" + str, true);
+    xhttp.open("GET", "https://lab3-frey.herokuapp.com/?name=" + str, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {

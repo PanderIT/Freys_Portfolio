@@ -49,7 +49,7 @@
 </div>
 <!-- ========= GET TIME ========== -->
 <div id="lab3" class="offset col-12 narrow text-center">
-    <div id="time">
+    <div>
         <h1 class="lead">What time is it?</h1>
 
         <div class="form-group">
@@ -58,7 +58,145 @@
             <button type="submit" class="btn btn-secondary btn-xs" onclick="getTime()">Submit</button>
         </div>
     </div>
+    <div id="time">
+
+    </div>
     <a class="btn btn-secondary btn-lg" href="/COMP4537.html">Back To Lab List</a>
+</div>
+
+<!-- ========= QUIZ ========== -->
+
+<div id="quiz" class="offset">
+    <div class="col-12 narrow text-center">
+        <h1 class="lead">Quiz</h1>
+        <form>
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="form-check ">
+                        <p>Q1. Which event occurs when the users mouse is on top of an HTML element?</p>
+                        <input class="form-check-input" type="radio" id="Q1A" name="lab1Q1" value="onMouseHover">
+                        <label class="form-check-label" for="Q1A">onMouseHover</label><br>
+                        <input class="form-check-input" type="radio" id="Q1B" name="lab1Q1" value="onmousehover">
+                        <label class="form-check-label" for="Q1B">onmousehover</label><br>
+                        <input class="form-check-input" type="radio" id="Q1C" name="lab1Q1" value="onMouseOver">
+                        <label class="form-check-label" for="Q1C">onMouseOver</label><br>
+                        <input class="form-check-input" type="radio" id="Q1D" name="lab1Q1" value="onmouseover">
+                        <label class="form-check-label" for="Q1D">onmouseover</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check ">
+                        <p>Q2. How do you create a function in javascript?</p>
+                        <input class="form-check-input" type="radio" id="Q2A" name="lab1Q2" value="func myFunction()">
+                        <label class="form-check-label" for="Q2A">func myFunction()</label><br>
+                        <input class="form-check-input" type="radio" id="Q2B" name="lab1Q2" value="func:myfunction()">
+                        <label class="form-check-label" for="Q2B">func:myfunction()</label><br>
+                        <input class="form-check-input" type="radio" id="Q2C" name="lab1Q2" value="function:myfunction()">
+                        <label class="form-check-label" for="Q2C">function:myfunction()</label><br>
+                        <input class="form-check-input" type="radio" id="Q2D" name="lab1Q2" value="function myfunction()">
+                        <label class="form-check-label" for="Q2D">function myfunction()</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check ">
+                        <p>Q3. How do you write a javascript array?</p>
+                        <input class="form-check-input" type="radio" id="Q3A" name="lab1Q3" value='var colors = ["man", "bear", "horse", "pig"]'>
+                        <label class="form-check-label" for="Q3A">var colors = ["man", "bear", "horse", "pig"]</label><br>
+                        <input class="form-check-input" type="radio" id="Q3B" name="lab1Q3" value='var colors = {"man", "bear", "horse", "pig"}'>
+                        <label class="form-check-label" for="Q3B">var colors = {"man", "bear", "horse", "pig"}</label><br>
+                        <input class="form-check-input" type="radio" id="Q3C" name="lab1Q3" value='var colors = "man", "bear", "horse", "pig"'>
+                        <label class="form-check-label" for="Q3C">var colors = "man", "bear", "horse", "pig"</label><br>
+                        <input class="form-check-input" type="radio" id="Q3D" name="lab1Q3" value='var colors = (1:"man", 2:"bear", 3:"horse", 4:"pig")'>
+                        <label class="form-check-label" for="Q3D">var colors = (1:"man", 2:"bear", 3:"horse", 4:"pig")</label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="form-check ">
+                        <p>Q4. Which of the following is NOT an array method?</p>
+                        <input class="form-check-input" type="radio" id="Q4A" name="lab1Q4" value="push()">
+                        <label class="form-check-label" for="Q4A">push()</label><br>
+                        <input class="form-check-input" type="radio" id="Q4B" name="lab1Q4" value="shift()">
+                        <label class="form-check-label" for="Q4B">shift()</label><br>
+                        <input class="form-check-input" type="radio" id="Q4C" name="lab1Q4" value="pop()">
+                        <label class="form-check-label" for="Q4C">pop()</label><br>
+                        <input class="form-check-input" type="radio" id="Q4D" name="lab1Q4" value="add()">
+                        <label class="form-check-label" for="Q4D">add()</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check ">
+                        <p>Q5. Whate is the output?</p>
+                        <img src="/image/L1Q1.png" alt="q1IMG"><br>
+                        <input class="form-check-input" type="radio" id="Q5A" name="lab1Q5" value="error">
+                        <label class="form-check-label" for="Q5A">NaN</label><br>
+                        <input class="form-check-input" type="radio" id="Q5B" name="lab1Q5" value="17">
+                        <label class="form-check-label" for="Q5B">17</label><br>
+                        <input class="form-check-input" type="radio" id="Q5C" name="lab1Q5" value="15">
+                        <label class="form-check-label" for="Q5C">15</label><br>
+                        <input class="form-check-input" type="radio" id="Q5D" name="lab1Q5" value="other">
+                        <label class="form-check-label" for="Q5D">c is not defined</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <button type="button" onclick="lab1Solution()" class="btn-secondary">Submit</button>
+          </form>
+        
+        <a class="btn btn-secondary btn-lg" href="/COMP4537.html">Back To Lab List</a>
+    </div>
+    <div class="jumbotron">
+        <div class="narrow text-center">
+            <div class="col-12">
+                <h3 class="heading">My Skills</h3>
+                <div class="heading-underline"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fab fa-android fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                        <h3 class="heading">Android App Development</h3>
+                        <p>I know how to make Android Apps</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fab fa-java fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                        <h3 class="heading">Java</h3>
+                        <p>I am familiar with Java and its UI design</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fab fa-js fa-4x" data-fa-transform="shrink-4 up-5"></i>
+                        <h3 class="heading">Javascript</h3>
+                        <p>Learned from the best</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fas fa-code fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                        <h3 class="heading">HTML5</h3>
+                        <p>I can type you up an essay on HTML as if it was Microsoft Word</p>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="fab fa-python fa-4x" data-fa-transform="shrink-4 up-5"></i>
+                        <h3 class="heading">Python</h3>
+                        <p>I am familiar with Python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--===========Resources============= -->

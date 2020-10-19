@@ -54,11 +54,13 @@
         <h1 class="lead">Memory Game</h1>
         <div class="row">
             <div class="col-1">
-                <button type="button" class="btn btn-secondary btn-xs" onclick="generateTiles()">Play</button> 
+                <button id="playButton" type="button" class="btn btn-secondary btn-xs" onclick="generateTiles()">Play</button> 
             </div>
-            <div class="col-8"></div>
+            <div class="col-7"></div>
             <div class="col-1">
-                <label for="score">Score:</label>
+                <p id="score">Score:</p>
+            </div>
+            <div class="col-1">
                 <p id="score">0</p>
             </div>
 

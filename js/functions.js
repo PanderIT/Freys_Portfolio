@@ -120,3 +120,31 @@ function getTime() {
         }
     };
 }
+
+function lab3Solution() {
+    var score = 0;
+
+    if (document.getElementById("Q1D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q2D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q3A").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q4D").checked) {
+        score++
+    }
+
+    if (document.getElementById("Q5B").checked) {
+        score++
+    }
+
+    console.log(score);
+
+    alert("You scored \n" + score + " / " + 5);
+}

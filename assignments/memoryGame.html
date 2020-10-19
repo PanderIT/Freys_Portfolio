@@ -52,9 +52,17 @@
 <div id="lab2" class="offset col-12 narrow text-center">
     <div>
         <h1 class="lead">Memory Game</h1>
-        <button type="button" class="btn btn-secondary btn-xs" onclick="generateButtons()">Submit</button>
+        <div class="row">
+            <div class="col-1">
+                <button type="button" class="btn btn-secondary btn-xs" onclick="generateTiles()">Play</button> 
+            </div>
+            <div class="col-8"></div>
+            <div class="col-1">
+                <label for="score">Score:</label>
+                <p id="score">0</p>
+            </div>
 
-
+        </div>
         <div id="tiles">
         </div>
     </div>

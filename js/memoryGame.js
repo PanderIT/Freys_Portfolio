@@ -24,10 +24,10 @@ function generateGame() {
 
     
     //determine x dimension
-    let cols = (level + 3) % 2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2);
+    let cols = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level+5)/2);
 
     //determine y dimension
-    let rows = (level + 3) % 2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2) -1;
+    let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level+5)/2) -1;
 
     //generate grid dimensions
     let grid = document.createElement("div");

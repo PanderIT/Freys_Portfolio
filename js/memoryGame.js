@@ -3,16 +3,23 @@
 
 
 
-function generateTiles() {
+function generateGame() {
+
+    //Return level 0 if score reaches below zero
+    let level = determineLevel();
+
+    //Continue game?
+    if (level === 0) {
+        gameOver();
+        return level;
+    }
 
     //reset frame
     let frame = document.getElementById("gridFrame");
     while (frame.lastChild){
         frame.removeChild(frame.lastChild);
-        console.log("Hello World");
     }
-    //determine score                       let score
-    //determine level                       let level = determineLevel(int level)
+
     //determine score req nxt lvl           let levelReq = level(level + 5) / 2
     //determine x dimension                 let x = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2);
     //determine y dimension                 let y = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2) -1;
@@ -21,11 +28,7 @@ function generateTiles() {
 
     //generate grid dimensions              createGrid();
     //generate array of mixed cells
-
-
-
-
-    let level = parseInt(document.getElementById("level").innerHTML);
+    //
     console.log("level: " + level);
 
     let grid = document.createElement("div");
@@ -44,8 +47,20 @@ function generateTiles() {
     
     
     frame.appendChild(grid);
+}
 
-// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function determineLevel() {
+    let currentLevel = parseInt(document.getElementById("level").innerHTML);
+    let currentScore = parseInt(document.getElementById("score").innerHTML);
+    if (currentScore < 3) return 1;
+    let levelReq     = currentLevel*(currentLevel + 5)/2;
+
+    console.log("Next Ascension: " + levelReq)
+    return (currentScore > levelReq) ? currentLevel+1 : currentLevel;
+}
+
+function gameOver() {
+    console.log("Game Over");
 }
 
 

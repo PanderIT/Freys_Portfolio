@@ -9,6 +9,7 @@ function generateTiles() {
     let frame = document.getElementById("gridFrame");
     while (frame.lastChild){
         frame.removeChild(frame.lastChild);
+        console.log("Hello World");
     }
     //determine score                       let score
     //determine level                       let level = determineLevel(int level)
@@ -18,9 +19,8 @@ function generateTiles() {
     //determine total memoryCells           let memoryCells = level + 2
     //determine total cells                 let cells = (x * y) - memoryCells;
 
-
     //generate grid dimensions              createGrid();
-    //generate r
+    //generate array of mixed cells
 
 
 

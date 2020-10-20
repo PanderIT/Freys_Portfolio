@@ -6,9 +6,9 @@
 function generateTiles() {
 
     let frame = document.getElementById("gridFrame");
-    frame.children.forEach(element => {
+    while (frame.lastChild){
         frame.removeChild(element);
-    });
+    }
     let level = parseInt(document.getElementById("level").innerHTML);
     console.log("level: " + level);
 

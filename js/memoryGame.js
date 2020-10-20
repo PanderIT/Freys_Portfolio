@@ -56,7 +56,8 @@ function generateGame() {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell"+(i+1)}`);
-        grid.insertBefore(cell, grid.childNodes[randomInt(grid.childNodes)])
+        let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
+        grid.insertBefore(cell, randomIndex);
         // grid.appendChild(cell);
     }
     frame.appendChild(grid);

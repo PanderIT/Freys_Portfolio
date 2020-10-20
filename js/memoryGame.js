@@ -5,8 +5,8 @@
 
 function generateTiles() {
 
-    let level = parseInt(document.getElementById("score").innerHTML);
-    console.log(level + 1);
+    let level = parseInt(document.getElementById("level").innerHTML);
+    console.log(level);
 
     let tiles = [];
 

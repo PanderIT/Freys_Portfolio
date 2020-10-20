@@ -37,6 +37,7 @@ function generateGame() {
 
     //determine total cells
     let cells = cols * rows;
+    console.log(`Cols: ${cols} \nRows: ${rows}`);
 
     //determine total memoryCells
     let memoryCells = level + 2;

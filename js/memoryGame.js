@@ -5,10 +5,26 @@
 
 function generateTiles() {
 
+    //reset frame
     let frame = document.getElementById("gridFrame");
-    while (frame.lastChild){
-        frame.removeChild(element);
+    while (frame.lasttChild){
+        frame.removeChild(frame.lastChild);
     }
+    //determine score                       let score
+    //determine level                       let level = determineLevel(int level)
+    //determine score req nxt lvl           let levelReq = level(level + 5) / 2
+    //determine x dimension                 let x = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2);
+    //determine y dimension                 let y = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2) -1;
+    //determine total memoryCells           let memoryCells = level + 2
+    //determine total cells                 let cells = (x * y) - memoryCells;
+
+
+    //generate grid dimensions              createGrid();
+    //generate r
+
+
+
+
     let level = parseInt(document.getElementById("level").innerHTML);
     console.log("level: " + level);
 

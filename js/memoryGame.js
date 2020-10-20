@@ -5,6 +5,10 @@
 
 function generateTiles() {
 
+    let frame = document.getElementById("gridFrame");
+    frame.children.forEach(element => {
+        frame.removeChild(element);
+    });
     let level = parseInt(document.getElementById("level").innerHTML);
     console.log("level: " + level);
 
@@ -18,15 +22,19 @@ function generateTiles() {
     for (var i = 0; i < cells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
-        cell.setAttribute("id", `${i+1}`);
+        cell.setAttribute("id", `${"cell"+(i+1)}`);
         grid.appendChild(cell);
     }
     
-    let frame = document.getElementById("gridFrame");
+    
     frame.appendChild(grid);
 
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    let tiles = [];
+}
+
+
+
+let tiles = [];
 
     let Tile = function(x, y) {
         this.x = x;
@@ -45,4 +53,3 @@ function generateTiles() {
             tiles.push(new Tile(tileX, tileY));
         }
     }
-}

@@ -14,7 +14,7 @@ function generateGame() {
         return level;
     }
 
-    console.log("level: " + level);
+                                                                                        console.log("level: " + level);
 
     //reset frame
     let frame = document.getElementById("gridFrame");
@@ -36,31 +36,29 @@ function generateGame() {
     grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
 
     //determine total cells
-    let cells = cols * rows;
-    console.log(`Cols: ${cols} \nRows: ${rows}`);
+    let cells = cols * rows;                                                            console.log(`Cols: ${cols} \nRows: ${rows}`);
 
     //determine total memoryCells
     let memoryCells = level + 2;
 
     let fakeCells = cells - memoryCells;
-
+                                                                                        console.log(`FakeCells: ${fakeCells}`);
     //generate array of mixed cells
-
-    console.log(`FakeCells: ${fakeCells}`);
     for (var i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell"+(i+1)}`);
+        cell.setAttribute("style", "background: orange");
         grid.appendChild(cell);
     }
-    console.log(`memoryCells: ${memoryCells}`);
+                                                                                        console.log(`memoryCells: ${memoryCells}`);
     for (var i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell"+(i+1)}`);
+        cell.setAttribute("style", "background: white");
         let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
         grid.insertBefore(cell, randomIndex);
-        // grid.appendChild(cell);
     }
     frame.appendChild(grid);
 }
@@ -72,9 +70,8 @@ function determineLevel() {
     if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
 
     let levelReq     = currentLevel*(currentLevel + 5)/2;
-    console.log(`Next Ascension: ${levelReq}`);
-    console.log(`Current Scoire:  ${currentScore}`);
-    
+                                                                                        console.log(`Next Ascension: ${levelReq}`);
+                                                                                        console.log(`Current Scoire:  ${currentScore}`);
     return (currentScore > levelReq) ? currentLevel+1 : currentLevel;
 }
 
@@ -83,7 +80,7 @@ function randomInt(max) {
 }
 
 function gameOver() {
-    console.log("Game Over");
+                                                                                        console.log("Game Over");
 }
 
 

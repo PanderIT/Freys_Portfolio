@@ -6,8 +6,23 @@
 function generateTiles() {
 
     let level = parseInt(document.getElementById("level").innerHTML);
-    console.log(level);
-    
+    console.log("level: " + level);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let frame = document.getElementById("gridFrame");
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     let tiles = [];
 
     let Tile = function(x, y) {

@@ -4,6 +4,10 @@
 
 
 function generateTiles() {
+
+    let level = document.getElementById("score").innerHTML;
+    console.log(level);
+
     let tiles = [];
 
     let Tile = function(x, y) {

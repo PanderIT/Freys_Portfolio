@@ -7,7 +7,7 @@ function generateTiles() {
 
     //reset frame
     let frame = document.getElementById("gridFrame");
-    while (frame.lasttChild){
+    while (frame.lastChild){
         frame.removeChild(frame.lastChild);
     }
     //determine score                       let score

@@ -2,7 +2,8 @@
     background: orange;
     display: inline-block;
     border: 5px solid orange;
-    align-self: center;
+    width: auto;
+    margin: auto;
   }
   
   .grid {

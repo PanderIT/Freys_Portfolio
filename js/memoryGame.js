@@ -45,13 +45,14 @@ function generateGame() {
 
     //generate array of mixed cells
 
+    console.log(`FakeCells: ${fakeCells}`);
     for (var i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell"+(i+1)}`);
         grid.appendChild(cell);
     }
-
+    console.log(`memoryCells: ${memoryCells}`);
     for (var i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");

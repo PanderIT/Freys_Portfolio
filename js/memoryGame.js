@@ -14,20 +14,19 @@ function generateGame() {
         return level;
     }
 
-                                                                                        console.log("level: " + level);
+    console.log("level: " + level);
 
     //reset frame
     let frame = document.getElementById("gridFrame");
-    while (frame.lastChild){
+    while (frame.lastChild) {
         frame.removeChild(frame.lastChild);
     }
 
-    
     //determine x dimension
-    let cols = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level+5)/2);
+    let cols = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2);
 
     //determine y dimension
-    let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level+5)/2) -1;
+    let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2) - 1;
 
     //generate grid dimensions
     let grid = document.createElement("div");
@@ -36,27 +35,27 @@ function generateGame() {
     grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
 
     //determine total cells
-    let cells = cols * rows;                                                            console.log(`Cols: ${cols} \nRows: ${rows}`);
+    let cells = cols * rows; console.log(`Cols: ${cols} \nRows: ${rows}`);
 
     //determine total memoryCells
     let memoryCells = level + 2;
 
     let fakeCells = cells - memoryCells;
-                                                                                        console.log(`FakeCells: ${fakeCells}`);
+    console.log(`FakeCells: ${fakeCells}`);
     //generate array of mixed cells
     for (var i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
-        cell.setAttribute("id", `${"cell"+(i+1)}`);
-        cell.setAttribute("style", "background: orange");
+        cell.setAttribute("id", `${"cell" + (i + 1)}`);
+        // cell.setAttribute("style", "background: orange");
         grid.appendChild(cell);
     }
-                                                                                        console.log(`memoryCells: ${memoryCells}`);
+    console.log(`memoryCells: ${memoryCells}`);
     for (var i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
-        cell.setAttribute("id", `${"cell"+(i+1)}`);
-        cell.setAttribute("style", "background: white");
+        cell.setAttribute("id", `${"cell" + (i + 1)}`);
+        // cell.setAttribute("style", "background: white");
         let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
         grid.insertBefore(cell, randomIndex);
     }
@@ -69,10 +68,10 @@ function determineLevel() {
     if (currentScore < 0) return 0;     //Game Over
     if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
 
-    let levelReq     = currentLevel*(currentLevel + 5)/2;
-                                                                                        console.log(`Next Ascension: ${levelReq}`);
-                                                                                        console.log(`Current Scoire:  ${currentScore}`);
-    return (currentScore > levelReq) ? currentLevel+1 : currentLevel;
+    let levelReq = currentLevel * (currentLevel + 5) / 2;
+    console.log(`Next Ascension: ${levelReq}`);
+    console.log(`Current Scoire:  ${currentScore}`);
+    return (currentScore > levelReq) ? currentLevel + 1 : currentLevel;
 }
 
 function randomInt(max) {
@@ -80,27 +79,25 @@ function randomInt(max) {
 }
 
 function gameOver() {
-                                                                                        console.log("Game Over");
+    console.log("Game Over");
 }
-
-
 
 let tiles = [];
 
-    let Tile = function(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = 50;
-    };
+let Tile = function (x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = 50;
+};
 
-    var NUM_COLS = 5;
-    var NUM_ROWS = 4;
+var NUM_COLS = 5;
+var NUM_ROWS = 4;
 
-    for (var i = 0; i < NUM_COLS; i++) {
+for (var i = 0; i < NUM_COLS; i++) {
 
-        for (var j = 0; j < NUM_ROWS; j++) {
-            var tileX = i * 54 + 5;
-            var tileY = j * 54 + 40;
-            tiles.push(new Tile(tileX, tileY));
-        }
+    for (var j = 0; j < NUM_ROWS; j++) {
+        var tileX = i * 54 + 5;
+        var tileY = j * 54 + 40;
+        tiles.push(new Tile(tileX, tileY));
     }
+}

@@ -21,18 +21,9 @@ function generateTiles() {
         cell.setAttribute("id", `${i+1}`);
         grid.appendChild(cell);
     }
-
-
-
-
-
-
-
-
-
-
-
+    
     let frame = document.getElementById("gridFrame");
+    frame.appendChild(grid);
 
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     let tiles = [];

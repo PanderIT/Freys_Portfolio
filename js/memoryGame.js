@@ -9,7 +9,7 @@ function generateTiles() {
     console.log("level: " + level);
 
     let grid = document.createElement("div");
-    grid.classList.add("grid");
+    grid.setAttribute("class", "grid");
     grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
     grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
 
@@ -17,7 +17,7 @@ function generateTiles() {
 
     for (var i = 0; i < cells; i++) {
         let cell = document.createElement("div");
-        cell.classList.add("cell");
+        cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${i+1}`);
         grid.appendChild(cell);
     }

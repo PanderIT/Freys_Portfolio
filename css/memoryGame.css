@@ -1,0 +1,24 @@
+.container {
+    background: orange;
+    display: inline-block;
+    border: 5px solid orange;
+  }
+  
+  .grid {
+    display: grid;
+    /* grid-template-columns: repeat(4, 80px); */
+    /* grid-template-rows: repeat(4, 80px); */
+    grid-gap: 5px;
+  }
+  
+  .cell {
+     /* center the cell content */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial;
+    font-size: 3rem;
+    font-weight: bold;
+    background: orange;
+    border: 3px solid white
+  }

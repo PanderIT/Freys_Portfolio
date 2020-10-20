@@ -14,49 +14,69 @@ function generateGame() {
         return level;
     }
 
+    console.log("level: " + level);
+
     //reset frame
     let frame = document.getElementById("gridFrame");
     while (frame.lastChild){
         frame.removeChild(frame.lastChild);
     }
 
-    //determine score req nxt lvl           let levelReq = level(level + 5) / 2
-    //determine x dimension                 let x = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2);
-    //determine y dimension                 let y = (level +3)%2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2) -1;
-    //determine total memoryCells           let memoryCells = level + 2
-    //determine total cells                 let cells = (x * y) - memoryCells;
+    
+    //determine x dimension
+    let cols = (level + 3) % 2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2);
 
-    //generate grid dimensions              createGrid();
-    //generate array of mixed cells
-    //
-    console.log("level: " + level);
+    //determine y dimension
+    let rows = (level + 3) % 2 === 0 ? (level + 3) / 2 : Math.round((level+3)/2) -1;
 
+    //generate grid dimensions
     let grid = document.createElement("div");
     grid.setAttribute("class", "grid");
-    grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
-    grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
+    grid.setAttribute("style", `grid-template-columns: repeat(${cols}, 80px)`);
+    grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
 
-    var cells = 9;
+    //determine total cells
+    let cells = cols * rows;
 
-    for (var i = 0; i < cells; i++) {
+    //determine total memoryCells
+    let memoryCells = level + 2;
+
+    let fakeCells = cells - memoryCells;
+
+    //generate array of mixed cells
+
+    for (var i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell"+(i+1)}`);
         grid.appendChild(cell);
     }
-    
-    
+
+    for (var i = 0; i < memoryCells; i++) {
+        let cell = document.createElement("div");
+        cell.setAttribute("class", "cell");
+        cell.setAttribute("id", `${"cell"+(i+1)}`);
+        grid.insertBefore(cell, grid.childNodes[randomInt(grid.childNodes)])
+        // grid.appendChild(cell);
+    }
     frame.appendChild(grid);
 }
 
 function determineLevel() {
     let currentLevel = parseInt(document.getElementById("level").innerHTML);
     let currentScore = parseInt(document.getElementById("score").innerHTML);
-    if (currentScore < 3) return 1;
-    let levelReq     = currentLevel*(currentLevel + 5)/2;
+    if (currentScore < 0) return 0;     //Game Over
+    if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
 
-    console.log("Next Ascension: " + levelReq)
+    let levelReq     = currentLevel*(currentLevel + 5)/2;
+    console.log(`Next Ascension: ${levelReq}`);
+    console.log(`Current Scoire:  ${currentScore}`);
+    
     return (currentScore > levelReq) ? currentLevel+1 : currentLevel;
+}
+
+function randomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
 function gameOver() {

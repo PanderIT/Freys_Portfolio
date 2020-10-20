@@ -7,7 +7,7 @@ function generateTiles() {
 
     let level = parseInt(document.getElementById("level").innerHTML);
     console.log(level);
-
+    
     let tiles = [];
 
     let Tile = function(x, y) {

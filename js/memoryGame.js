@@ -1,6 +1,7 @@
 
-
-
+function fun(){
+    document.getElementById("myID").appendChild(document.createElement("button").textContent = "click me!");
+}
 
 
 function generateGame() {

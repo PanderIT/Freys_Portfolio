@@ -1,9 +1,4 @@
-
-function fun(){
-    document.getElementById("myID").appendChild(document.createElement("BUTTON", innerHTML="Hello"));
-}
-
-
+document.getElementById("myID").innerText = "Bruh";
 function generateGame() {
 
     //Return level 0 if score reaches below zero

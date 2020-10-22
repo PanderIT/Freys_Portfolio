@@ -1,6 +1,6 @@
 
 function fun(){
-    document.getElementById("myID").appendChild(document.createElement("button").textContent = "click me!");
+    document.getElementById("myID").appendChild(document.createElement("BUTTON", innerHTML="Hello"));
 }
 
 

@@ -26,11 +26,12 @@ function generateGame() {
 
     //generate grid dimensions
     let grid = document.createElement("div");
-    grid.setAttribute("class", "grid");
     // grid.setAttribute("style", `grid-template-columns: repeat(${cols}, 80px)`);
     // grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
     grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
     grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
+    grid.setAttribute("class", "grid");
+
 
     //determine total cells
     let cells = cols * rows; console.log(`Cols: ${cols} \nRows: ${rows}`);

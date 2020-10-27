@@ -1,4 +1,3 @@
-document.getElementById("myID").innerText = "Bruh";
 function generateGame() {
 
     //Return level 0 if score reaches below zero
@@ -24,6 +23,16 @@ function generateGame() {
     //determine y dimension
     let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2) - 1;
 
+    let style = document.createElement("style");
+    style.innerHTML = `.grid {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        grid-gap: 5px;
+      }`;
+    
+    let ref = document.querySelector("script");
+    ref.parentNode.insertBefore(style, ref);
     //generate grid dimensions
     let grid = document.createElement("div");
     // grid.setAttribute("style", `grid-template-columns: repeat(${cols}, 80px)`);
@@ -79,24 +88,4 @@ function randomInt(max) {
 
 function gameOver() {
     console.log("Game Over");
-}
-
-let tiles = [];
-
-let Tile = function (x, y) {
-    this.x = x;
-    this.y = y;
-    this.size = 50;
-};
-
-var NUM_COLS = 5;
-var NUM_ROWS = 4;
-
-for (var i = 0; i < NUM_COLS; i++) {
-
-    for (var j = 0; j < NUM_ROWS; j++) {
-        var tileX = i * 54 + 5;
-        var tileY = j * 54 + 40;
-        tiles.push(new Tile(tileX, tileY));
-    }
 }

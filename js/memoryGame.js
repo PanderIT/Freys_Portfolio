@@ -37,8 +37,8 @@ function generateGame() {
     let grid = document.createElement("div");
     // grid.setAttribute("style", `grid-template-columns: repeat(${cols}, 80px)`);
     // grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
-    grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
-    grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
+    // grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
+    // grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
     grid.setAttribute("class", "grid");
 
 

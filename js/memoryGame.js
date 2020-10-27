@@ -26,8 +26,8 @@ function generateGame() {
     let style = document.createElement("style");
     style.innerHTML = `.grid {
         display: grid;
-        grid-template-columns: repeat(3, 80px);
-        grid-template-rows: repeat(3, 80px);
+        grid-template-columns: repeat(${cols}, 80px);
+        grid-template-rows: repeat(${rows}, 80px);
         grid-gap: 5px;
       }`;
     

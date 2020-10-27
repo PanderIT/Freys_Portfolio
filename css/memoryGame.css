@@ -5,14 +5,7 @@
     width: auto;
     margin: auto;
   }
-  
-  /* .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, 80px);
-    grid-gap: 5px;
-  } */
-  
+    
   .cell {
      /* center the cell content */
     justify-content: center;

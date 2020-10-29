@@ -81,9 +81,9 @@ function generateGame() {
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
-    grid.setAttribute("class", "grid spinning");
+    frame.setAttribute("class", "gridframe spinning");
     setTimeout(() => {
-        grid.setAttribute("class", "grid");
+        frame.setAttribute("class", "gridframe");
     }, 1000);
 }
 

@@ -1,5 +1,5 @@
 function generateGame() {
-
+    console.clear();
     //Return level 0 if score reaches below zero
     let level = (determineLevel() > 8) ? 9 : determineLevel();
     document.getElementById("level").innerHTML = level;
@@ -120,10 +120,8 @@ function determineLevel() {
     let currentScore = parseInt(document.getElementById("score").innerHTML);
     if (currentScore < 0) return 0;     //Game Over
     if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
-
     let levelReq = currentLevel * (currentLevel + 5) / 2;
     let pastReq = (currentLevel-1) * ((currentLevel-1) + 5) / 2;
-    console.log(`Next Ascension: ${levelReq}`);
     console.log(`Current Score:  ${currentScore}`);
     return (currentScore >= levelReq) ? currentLevel + 1 : 
             (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;

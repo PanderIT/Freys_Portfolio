@@ -2,6 +2,7 @@ function generateGame() {
 
     //Return level 0 if score reaches below zero
     let level = determineLevel();
+    document.getElementById("level").innerHTML = level;
 
     //Continue game?
     if (level === 0) {
@@ -47,6 +48,8 @@ function generateGame() {
 
     //determine total memoryCells
     let memoryCells = level + 2;
+    document.getElementById("cells").innerHTML = memoryCells;
+    
 
     let fakeCells = cells - memoryCells;
 
@@ -92,6 +95,15 @@ function incorrect(cell) {
     document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) -1;
     cell.setAttribute("style", "background: tomato");
     cell.setAttribute("onclick", "");
+}
+
+function cellClicked() {
+    let cellsClicked = parseInt(document.getElementById("cells").innerHTML);
+    if(cellsClicked === 0) {
+        generateGame();
+    } else {
+        document.getElementById("cells").innerHTML = cellsClicked -1;
+    }
 }
 
 function determineLevel() {

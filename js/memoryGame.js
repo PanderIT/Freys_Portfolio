@@ -31,6 +31,13 @@ function generateGame() {
         grid-template-columns: repeat(${cols}, 80px);
         grid-template-rows: repeat(${rows}, 80px);
         grid-gap: 5px;
+      }
+    .gridFrame {
+        background: orange;
+        display: inline-block;
+        border: 5px solid orange;
+        width: auto;
+        margin: auto;
       }`;
     
     let ref = document.querySelector("script");

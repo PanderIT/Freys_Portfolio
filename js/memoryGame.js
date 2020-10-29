@@ -14,6 +14,7 @@ function generateGame() {
 
     //reset frame
     let frame = document.getElementById("gridFrame");
+    frame.setAttribute("class", "gridframe");
     while (frame.lastChild) {
         frame.removeChild(frame.lastChild);
     }
@@ -81,8 +82,10 @@ function generateGame() {
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
+    frame.setAttribute("class", "gridframe spinning");
     grid.setAttribute("class", "grid spinning");
     setTimeout(() => {
+        frame.setAttribute("class", "gridframe");
         grid.setAttribute("class", "grid");
     }, 1000);
 }

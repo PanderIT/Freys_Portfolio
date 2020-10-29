@@ -31,13 +31,6 @@ function generateGame() {
         grid-template-columns: repeat(${cols}, 80px);
         grid-template-rows: repeat(${rows}, 80px);
         grid-gap: 5px;
-      }
-    .gridFrame {
-        background: orange;
-        display: inline-block;
-        border: 5px solid orange;
-        width: auto;
-        margin: auto;
       }`;
     
     let ref = document.querySelector("script");
@@ -88,9 +81,9 @@ function generateGame() {
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
-    frame.setAttribute("class", "gridframe spinning");
+    grid.setAttribute("class", "grid spinning");
     setTimeout(() => {
-        frame.setAttribute("class", "gridframe");
+        grid.setAttribute("class", "grid");
     }, 1000);
 }
 

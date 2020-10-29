@@ -119,7 +119,7 @@ function endRound() {
 function determineLevel() {
     let currentLevel = parseInt(document.getElementById("level").innerHTML);
     let currentScore = parseInt(document.getElementById("score").innerHTML);
-    // if (currentScore < 0) return 0;     //Game Over
+    if (currentScore < 0) return 0;     //Game Over
     // if (currentScore < 3) return 1;     //Level 1, no need to check level requirements greenyellow / maroon
 
     let levelReq = currentLevel * (currentLevel + 5) / 2;

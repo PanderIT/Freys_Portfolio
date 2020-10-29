@@ -122,8 +122,10 @@ function cellClicked() {
 function updateHighscore() {
     let score = parseInt(document.getElementById("score").innerHTML);
     let highscore = parseInt(document.getElementById("score").innerHTML);
+    let name = document.getElementById("name").innerText;
     document.getElementById("highscore").innerHTML = (score > highscore) ? score : highscore;
-    if(document.getElementById("name").innerText === "") {
+    console.log(name);
+    if(name === "") {
         alert("Warning, Please enter your name if you want your score to be recorded.");
         return;
     }

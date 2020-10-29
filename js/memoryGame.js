@@ -14,7 +14,7 @@ function generateGame() {
 
     //reset frame
     let frame = document.getElementById("gridFrame");
-    frame.setAttribute("class", "gridframe");
+    // frame.setAttribute("class", "gridframe");
     while (frame.lastChild) {
         frame.removeChild(frame.lastChild);
     }

@@ -120,13 +120,14 @@ function determineLevel() {
     let currentLevel = parseInt(document.getElementById("level").innerHTML);
     let currentScore = parseInt(document.getElementById("score").innerHTML);
     if (currentScore < 0) return 0;     //Game Over
-    // if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
+    if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
 
     let levelReq = currentLevel * (currentLevel + 5) / 2;
     let pastReq = (currentLevel-1) * ((currentLevel-1) + 5) / 2;
     console.log(`Next Ascension: ${levelReq}`);
     console.log(`Current Scoire:  ${currentScore}`);
-    return (currentScore >= levelReq) ? currentLevel + 1 : (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;
+    return (currentScore >= levelReq) ? currentLevel + 1 : 
+            (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;
 }
 
 function randomInt(max) {

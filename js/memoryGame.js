@@ -139,6 +139,11 @@ function randomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+function reset() {
+    document.getElementById("score").innerHTML = 0;
+    generateGame();
+}
+
 function gameOver() {
     console.log("Game Over");
 }

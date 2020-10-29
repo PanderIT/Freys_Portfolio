@@ -84,10 +84,10 @@ function generateGame() {
     frame.appendChild(grid);
     frame.setAttribute("class", "gridframe spinning");
     grid.setAttribute("class", "grid spinning");
-    setTimeout(() => {
-        frame.setAttribute("class", "gridframe");
-        grid.setAttribute("class", "grid");
-    }, 1000);
+    // setTimeout(() => {
+    //     frame.setAttribute("class", "gridframe");
+    //     grid.setAttribute("class", "grid");
+    // }, 1000);
 }
 
 function correct(cell) {

@@ -102,7 +102,7 @@ function incorrect(cell) {
 function cellClicked() {
     let cellsClicked = parseInt(document.getElementById("cells").innerHTML);
     console.log(cellsClicked);
-    if(cellsClicked === 0) {
+    if(cellsClicked === 1) {
         generateGame();
     } else {
         document.getElementById("cells").innerHTML = cellsClicked -1;

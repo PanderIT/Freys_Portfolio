@@ -135,7 +135,7 @@ function updateHighscore() {
 function recordScore() {
     let xhttp = new XMLHttpRequest();
     let name = document.getElementById("name").value;
-    let score = document.getElementById("highscore").value;
+    let score = document.getElementById("highscore").innerHTML;
     console.log(name + " " + score);
     xhttp.open("GET", `https://memorygamedbserver.herokuapp.com/${name}/${score}`, true);
     xhttp.send();

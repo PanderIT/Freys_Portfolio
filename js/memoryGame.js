@@ -66,7 +66,7 @@ function generateGame() {
         cell.setAttribute("style", "background: beige");
         setTimeout(function(){ 
             cell.setAttribute("style", "background: orange");
-            cell.setAttribute("onclick", "correct();");
+            cell.setAttribute("onclick", "correct(this);");
         }, 1000);
         let randomChild = grid.childNodes[randomInt(grid.childNodes.length+1)];
         let randomIndex = randomInt(grid.childNodes.length);
@@ -78,6 +78,8 @@ function generateGame() {
 
 function correct() {
     console.log("Correct");
+    this.setAttribute("style", "background: greenyellow");
+    this.setAttribute("onclick", "");
 }
 
 function incorrect() {

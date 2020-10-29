@@ -88,6 +88,7 @@ function correct(cell) {
     document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) +1;
     cell.setAttribute("style", "background: greenyellow");
     cell.setAttribute("onclick", "");
+    cellClicked();
 }
 
 function incorrect(cell) {
@@ -95,6 +96,7 @@ function incorrect(cell) {
     document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) -1;
     cell.setAttribute("style", "background: tomato");
     cell.setAttribute("onclick", "");
+    cellClicked();
 }
 
 function cellClicked() {

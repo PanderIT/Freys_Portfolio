@@ -103,10 +103,17 @@ function cellClicked() {
     let cellsClicked = parseInt(document.getElementById("cells").innerHTML);
     console.log(cellsClicked);
     if(cellsClicked === 1) {
-        setTimeout(generateGame, 1000);
+        endRound();
     } else {
         document.getElementById("cells").innerHTML = cellsClicked -1;
     }
+}
+
+function endRound() {
+    document.getElementById("grid").childNodes.forEach(cell => {
+        cell.setAttribute("onclick", "");
+    });
+    setTimeout(generateGame, 1000);
 }
 
 function determineLevel() {

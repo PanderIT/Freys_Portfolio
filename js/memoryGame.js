@@ -123,7 +123,7 @@ function updateHighscore() {
     let score = parseInt(document.getElementById("score").innerHTML);
     let highscore = parseInt(document.getElementById("score").innerHTML);
     document.getElementById("highscore").innerHTML = (score > highscore) ? score : highscore;
-    if(document.getElementById("name").value === "") {
+    if(document.getElementById("name").innerText === "") {
         alert("Warning, Please enter your name if you want your score to be recorded.");
         return;
     }

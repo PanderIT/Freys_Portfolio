@@ -95,7 +95,8 @@ function generateGame() {
 
 function correct(cell) {
     console.log("Correct");
-    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) +1;
+    score = document.getElementById("score").innerHTML;
+    score = parseInt(document.getElementById("score").innerHTML) +1;
     cell.setAttribute("style", "background: greenyellow");
     cell.setAttribute("onclick", "");
     cellClicked();
@@ -148,4 +149,6 @@ function reset() {
 
 function gameOver() {
     console.log("Game Over");
+    window.open("https://freyden.studio/assignments/highscores.html");
+    reset()
 }

@@ -1,12 +1,8 @@
 function generateGame() {
 
-    if(document.getElementById("name").innerHTML === "") {
-        alert("Warning, Your highscore will not be recorded without a Name.");
-    }
-
     console.clear();
     //Return level 0 if score reaches below zero
-    let level = (determineLevel() > 8) ? 9 : determineLevel();
+    let level = determineLevel();
     document.getElementById("level").innerHTML = level;
 
     //Continue game?
@@ -14,8 +10,6 @@ function generateGame() {
         gameOver();
         return level;
     }
-
-    console.log("level: " + level);
 
     //reset frame
     let frame = document.getElementById("gridFrame");
@@ -52,7 +46,7 @@ function generateGame() {
 
 
     //determine total cells
-    let cells = cols * rows; console.log(`Cols: ${cols} \nRows: ${rows}`);
+    let cells = cols * rows; 
 
     //determine total memoryCells
     let memoryCells = level + 2;
@@ -60,7 +54,6 @@ function generateGame() {
     
     let fakeCells = cells - memoryCells;
 
-    console.log(`FakeCells: ${fakeCells}`);
     //generate array of mixed cells
     for (let i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
@@ -72,7 +65,6 @@ function generateGame() {
         }, 1000);
         grid.appendChild(cell);
     }
-    console.log(`memoryCells: ${memoryCells}`);
     for (let i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
@@ -93,6 +85,12 @@ function generateGame() {
         // frame.setAttribute("class", "gridframe");
         grid.setAttribute("class", "grid");
     }, 1000);
+
+    console.log(`level: ${level}`);
+    console.log(`Current Score:  ${document.getElementById("score").innerHTML}`);
+    console.log(`Cols: ${cols} \nRows: ${rows}`);
+    console.log(`FakeCells: ${fakeCells}`);
+    console.log(`memoryCells: ${memoryCells}`);
 }
 
 function correct(cell) {
@@ -112,12 +110,11 @@ function incorrect(cell) {
 }
 
 function cellClicked() {
-    let cellsClicked = parseInt(document.getElementById("cells").innerHTML);
-    console.log(cellsClicked);
-    if(cellsClicked === 1) {
+    let cellsLeft = parseInt(document.getElementById("cells").innerHTML);
+    if(cellsLeft === 1) {
         endRound();
     } else {
-        document.getElementById("cells").innerHTML = cellsClicked -1;
+        document.getElementById("cells").innerHTML = cellsLeft -1;
     }
 }
 
@@ -135,9 +132,9 @@ function determineLevel() {
     if (currentScore < 3) return 1;     //Level 1, no need to check level requirements
     let levelReq = currentLevel * (currentLevel + 5) / 2;
     let pastReq = (currentLevel-1) * ((currentLevel-1) + 5) / 2;
-    console.log(`Current Score:  ${currentScore}`);
-    return (currentScore >= levelReq) ? currentLevel + 1 : 
-            (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;
+    let level = (currentScore >= levelReq) ? currentLevel + 1 : 
+                 (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;
+    return (level > 8) ? 9 : level;
 }
 
 function randomInt(max) {

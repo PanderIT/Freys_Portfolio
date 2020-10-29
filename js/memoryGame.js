@@ -1,4 +1,9 @@
 function generateGame() {
+
+    if(document.getElementById("name").innerHTML === "") {
+        alert("Warning, Your highscore will not be recorded without a Name.");
+    }
+
     console.clear();
     //Return level 0 if score reaches below zero
     let level = (determineLevel() > 8) ? 9 : determineLevel();

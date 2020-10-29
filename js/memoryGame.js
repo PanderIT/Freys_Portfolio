@@ -55,7 +55,7 @@ function generateGame() {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
-        cell.setAttribute("style", "background: orange");
+        cell.setAttribute("style", "background: white");
         grid.appendChild(cell);
     }
     console.log(`memoryCells: ${memoryCells}`);
@@ -63,7 +63,7 @@ function generateGame() {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
-        cell.setAttribute("style", "background: white");
+        cell.setAttribute("style", "background: orange");
         let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
         console.log(randomIndex);
         grid.insertBefore(cell, randomIndex);

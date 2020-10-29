@@ -122,7 +122,7 @@ function cellClicked() {
 function updateHighscore() {
     let score = parseInt(document.getElementById("score").innerHTML);
     let highscore = parseInt(document.getElementById("score").innerHTML);
-    let name = document.getElementById("name").innerText;
+    let name = document.getElementById("name").innerHTML;
     document.getElementById("highscore").innerHTML = (score > highscore) ? score : highscore;
     console.log(name);
     if(name === "") {

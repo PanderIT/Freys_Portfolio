@@ -49,6 +49,7 @@ function generateGame() {
     let memoryCells = level + 2;
 
     let fakeCells = cells - memoryCells;
+
     console.log(`FakeCells: ${fakeCells}`);
     //generate array of mixed cells
     for (var i = 0; i < fakeCells; i++) {
@@ -78,6 +79,7 @@ function generateGame() {
 
 function correct() {
     console.log("Correct");
+    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) +1;
     this.setAttribute("style", "background: greenyellow");
     this.setAttribute("onclick", "");
 }

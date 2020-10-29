@@ -25,12 +25,27 @@ function generateGame() {
     let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2) - 1;
 
     let style = document.createElement("style");
-    style.innerHTML = `.grid {
+    style.innerHTML = `
+    .grid {
         display: grid;
         grid-template-columns: repeat(${cols}, 80px);
         grid-template-rows: repeat(${rows}, 80px);
         grid-gap: 5px;
-      }`;
+      }
+    .spinning {
+        transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        }
+    #grid {
+        transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -webkit-transition: 2s;
+        -o-transition: 2s;
+        }`;
     
     let ref = document.querySelector("script");
     ref.parentNode.insertBefore(style, ref);
@@ -80,6 +95,7 @@ function generateGame() {
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
+    grid.setAttribute("class", "grid spinning");
 }
 
 function correct(cell) {

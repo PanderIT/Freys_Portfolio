@@ -66,7 +66,7 @@ function generateGame() {
         cell.setAttribute("style", "background: orange");
         setTimeout(function(){ 
             cell.setAttribute("style", "background: beige");
-        }, 3000);
+        }, 1000);
         let randomChild = grid.childNodes[randomInt(grid.childNodes.length+1)];
         let randomIndex = randomInt(grid.childNodes.length);
         console.log(randomIndex);

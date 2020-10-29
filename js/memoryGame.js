@@ -85,6 +85,7 @@ function determineLevel() {
 }
 
 function randomInt(max) {
+    console.log('RANDOM INT: ' + Math.floor(Math.random() * Math.floor(max)));
     return Math.floor(Math.random() * Math.floor(max));
 }
 

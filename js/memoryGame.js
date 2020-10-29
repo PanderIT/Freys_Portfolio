@@ -90,7 +90,7 @@ function correct(cell) {
 function incorrect(cell) {
     console.log("inCorrect");
     document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) -1;
-    cell.setAttribute("style", "background: maroon");
+    cell.setAttribute("style", "background: tomato");
     cell.setAttribute("onclick", "");
 }
 

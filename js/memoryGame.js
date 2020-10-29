@@ -77,7 +77,6 @@ function generateGame() {
         }, 1000);
         let randomChild = grid.childNodes[randomInt(grid.childNodes.length+1)];
         let randomIndex = randomInt(grid.childNodes.length);
-        console.log(randomIndex);
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
@@ -125,13 +124,12 @@ function determineLevel() {
     let levelReq = currentLevel * (currentLevel + 5) / 2;
     let pastReq = (currentLevel-1) * ((currentLevel-1) + 5) / 2;
     console.log(`Next Ascension: ${levelReq}`);
-    console.log(`Current Scoire:  ${currentScore}`);
+    console.log(`Current Score:  ${currentScore}`);
     return (currentScore >= levelReq) ? currentLevel + 1 : 
             (currentScore <= pastReq) ? currentLevel - 1 : currentLevel;
 }
 
 function randomInt(max) {
-    console.log('RANDOM INT: ' + Math.floor(Math.random() * Math.floor(max)));
     return Math.floor(Math.random() * Math.floor(max));
 }
 

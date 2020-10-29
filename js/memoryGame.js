@@ -95,11 +95,11 @@ function generateGame() {
 
 function correct(cell) {
     console.log("Correct");
-    score = document.getElementById("score").innerHTML;
-    score = parseInt(document.getElementById("score").innerHTML) +1;
+    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) +1;
     cell.setAttribute("style", "background: greenyellow");
     cell.setAttribute("onclick", "");
     cellClicked();
+    updateHighscore();
 }
 
 function incorrect(cell) {
@@ -117,6 +117,12 @@ function cellClicked() {
     } else {
         document.getElementById("cells").innerHTML = cellsLeft -1;
     }
+}
+
+function updateHighscore() {
+    let score = parseInt(document.getElementById("score").innerHTML);
+    let highscore = parseInt(document.getElementById("score").innerHTML);
+    document.getElementById("highscore").innerHTML = (score > highscore) ? score : highscore;
 }
 
 function endRound() {

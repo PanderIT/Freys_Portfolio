@@ -64,10 +64,10 @@ function generateGame() {
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
         cell.setAttribute("style", "background: orange");
-        // let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
-        let randomIndex = randomInt(grid.childNodes);
+        let randomChild = grid.childNodes[randomInt(grid.childNodes.length)];
+        let randomIndex = randomInt(grid.childNodes.length);
         console.log(randomIndex);
-        grid.insertBefore(cell, randomIndex);
+        grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
 }

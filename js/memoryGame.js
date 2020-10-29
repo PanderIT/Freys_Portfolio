@@ -1,7 +1,7 @@
 function generateGame() {
 
     //Return level 0 if score reaches below zero
-    let level = determineLevel();
+    let level = (determineLevel() > 8) ? 9 : determineLevel();
     document.getElementById("level").innerHTML = level;
 
     //Continue game?
@@ -55,7 +55,7 @@ function generateGame() {
 
     console.log(`FakeCells: ${fakeCells}`);
     //generate array of mixed cells
-    for (var i = 0; i < fakeCells; i++) {
+    for (let i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
@@ -66,7 +66,7 @@ function generateGame() {
         grid.appendChild(cell);
     }
     console.log(`memoryCells: ${memoryCells}`);
-    for (var i = 0; i < memoryCells; i++) {
+    for (let i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);

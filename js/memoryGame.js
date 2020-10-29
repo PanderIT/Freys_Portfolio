@@ -55,7 +55,7 @@ function generateGame() {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
-        cell.setAttribute("style", "background: beige");
+        cell.setAttribute("style", "background: orange");
         grid.appendChild(cell);
     }
     console.log(`memoryCells: ${memoryCells}`);
@@ -63,9 +63,10 @@ function generateGame() {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
-        cell.setAttribute("style", "background: orange");
+        cell.setAttribute("style", "background: beige");
         setTimeout(function(){ 
-            cell.setAttribute("style", "background: beige");
+            cell.setAttribute("style", "background: orange");
+            cell.setAttribute("onclick", "correct();");
         }, 1000);
         let randomChild = grid.childNodes[randomInt(grid.childNodes.length+1)];
         let randomIndex = randomInt(grid.childNodes.length);
@@ -73,6 +74,14 @@ function generateGame() {
         grid.insertBefore(cell, randomChild);
     }
     frame.appendChild(grid);
+}
+
+function correct() {
+    console.log("Correct");
+}
+
+function incorrect() {
+
 }
 
 function determineLevel() {

@@ -85,7 +85,10 @@ function correct(cell) {
 }
 
 function incorrect() {
-
+    console.log("inCorrect");
+    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) -1;
+    cell.setAttribute("style", "background: maroon");
+    cell.setAttribute("onclick", "");
 }
 
 function determineLevel() {

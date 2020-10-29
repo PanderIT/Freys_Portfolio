@@ -77,11 +77,11 @@ function generateGame() {
     frame.appendChild(grid);
 }
 
-function correct() {
+function correct(cell) {
     console.log("Correct");
     document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) +1;
-    this.setAttribute("style", "background: greenyellow");
-    this.setAttribute("onclick", "");
+    cell.setAttribute("style", "background: greenyellow");
+    cell.setAttribute("onclick", "");
 }
 
 function incorrect() {

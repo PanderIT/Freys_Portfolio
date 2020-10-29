@@ -41,6 +41,7 @@ function generateGame() {
     // grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
     // grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
     grid.setAttribute("class", "grid");
+    grid.setAttribute("id", "grid");
 
 
     //determine total cells

@@ -64,7 +64,8 @@ function generateGame() {
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
         cell.setAttribute("style", "background: orange");
-        let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
+        // let randomIndex = grid.childNodes[randomInt(grid.childNodes)];
+        let randomIndex = randomInt(grid.childNodes);
         console.log(randomIndex);
         grid.insertBefore(cell, randomIndex);
     }

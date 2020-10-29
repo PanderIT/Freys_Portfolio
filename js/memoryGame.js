@@ -82,6 +82,9 @@ function generateGame() {
     }
     frame.appendChild(grid);
     grid.setAttribute("class", "grid spinning");
+    setTimeout(() => {
+        grid.setAttribute("class", "grid");
+    }, 1000);
 }
 
 function correct(cell) {

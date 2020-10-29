@@ -20,10 +20,10 @@ function generateGame() {
     }
 
     //determine x dimension
-    let cols = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2);
+    let cols = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2) - 1;
 
     //determine y dimension
-    let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2) - 1;
+    let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2);
 
     let style = document.createElement("style");
     style.innerHTML = `

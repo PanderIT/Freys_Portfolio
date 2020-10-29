@@ -1,7 +1,5 @@
 function generateGame() {
 
-    setTimeout
-
     //Return level 0 if score reaches below zero
     let level = determineLevel();
 
@@ -66,6 +64,9 @@ function generateGame() {
         cell.setAttribute("class", "cell");
         cell.setAttribute("id", `${"cell" + (i + 1)}`);
         cell.setAttribute("style", "background: orange");
+        setTimeout(function(){ 
+            cell.setAttribute("style", "background: beige");
+        }, 3000);
         let randomChild = grid.childNodes[randomInt(grid.childNodes.length+1)];
         let randomIndex = randomInt(grid.childNodes.length);
         console.log(randomIndex);

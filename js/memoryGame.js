@@ -127,7 +127,22 @@ function updateHighscore() {
         alert("Warning, Please enter your name if you want your score to be recorded.");
         return;
     }
-    //Send highscore to databse.
+    recordScore();
+}
+
+function recordScore() {
+    let xhttp = new XMLHttpRequest();
+    let name = document.getElementById("name").value;
+    let score = document.getElementById("highscore").value;
+    console.log(str);
+    xhttp.open("GET", `https://memorygamedbserver.herokuapp.com/${name}/${score}`, true);
+    xhttp.send();
+    // xhttp.onreadystatechange = function () {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         document.getElementById("time").innerHTML =
+    //             this.responseText;
+    //     }
+    // };
 }
 
 function endRound() {

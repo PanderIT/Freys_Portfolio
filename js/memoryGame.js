@@ -91,6 +91,14 @@ function generateGame() {
     console.log(`Cols: ${cols} \nRows: ${rows}`);
     console.log(`FakeCells: ${fakeCells}`);
     console.log(`memoryCells: ${memoryCells}`);
+
+    let name = document.getElementById("name").value;
+    console.log(name);
+    if(name === "") {
+        alert("Warning, Please enter your name if you want your score to be recorded.");
+        return;
+    }
+    recordScore();
 }
 
 function correct(cell) {
@@ -122,14 +130,7 @@ function cellClicked() {
 function updateHighscore() {
     let score = parseInt(document.getElementById("score").innerHTML);
     let highscore = parseInt(document.getElementById("score").innerHTML);
-    let name = document.getElementById("name").value;
     document.getElementById("highscore").innerHTML = (score > highscore) ? score : highscore;
-    console.log(name);
-    if(name === "") {
-        alert("Warning, Please enter your name if you want your score to be recorded.");
-        return;
-    }
-    recordScore();
 }
 
 function recordScore() {
@@ -176,6 +177,7 @@ function reset() {
 
 function gameOver() {
     console.log("Game Over");
+    recordScore();
     window.open("https://freyden.studio/assignments/highscores.html");
     reset()
 }

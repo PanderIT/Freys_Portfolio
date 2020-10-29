@@ -137,12 +137,11 @@ function recordScore() {
     console.log(str);
     xhttp.open("GET", `https://memorygamedbserver.herokuapp.com/${name}/${score}`, true);
     xhttp.send();
-    // xhttp.onreadystatechange = function () {
-    //     if (this.readyState == 4 && this.status == 200) {
-    //         document.getElementById("time").innerHTML =
-    //             this.responseText;
-    //     }
-    // };
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
 }
 
 function endRound() {

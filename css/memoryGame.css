@@ -4,11 +4,6 @@
     border: 5px solid orange;
     width: auto;
     margin: auto;
-    transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -webkit-transition: 2s;
-    -o-transition: 2s;
   }
     
 .cell {

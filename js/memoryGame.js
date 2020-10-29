@@ -103,7 +103,7 @@ function cellClicked() {
     let cellsClicked = parseInt(document.getElementById("cells").innerHTML);
     console.log(cellsClicked);
     if(cellsClicked === 1) {
-        generateGame();
+        setTimeout(generateGame, 1000);
     } else {
         document.getElementById("cells").innerHTML = cellsClicked -1;
     }

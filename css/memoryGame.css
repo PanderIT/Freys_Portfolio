@@ -6,7 +6,7 @@
     margin: auto;
   }
     
-  .cell {
+.cell {
      /* center the cell content */
     justify-content: center;
     align-items: center;
@@ -17,3 +17,19 @@
     background: orange;
     border: 3px solid white
   }
+
+.spinning {
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    }
+
+#grid {
+    transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    }

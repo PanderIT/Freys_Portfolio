@@ -8,7 +8,7 @@ function getHighscores() {
             console.log(JSON.parse(this.responseText));
         }
     };
-    xhttp.open("GET", `https://memorygamedbserver.herokuapp.com`, true);
+    xhttp.open("GET", `https://memorygamedbserver.herokuapp.com/`, true);
     xhttp.send();
     
 }

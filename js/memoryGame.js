@@ -84,9 +84,9 @@ function generateGame() {
 
     //Rotate grid 90 degrees
     grid.setAttribute("class", "grid spinning");
-    // setTimeout(() => {
-    //     grid.setAttribute("class", "grid");
-    // }, 1000);
+    setTimeout(() => {
+        grid.setAttribute("class", "grid");
+    }, 1000);
 
     console.log(`level: ${level}`);
     console.log(`Current Score:  ${document.getElementById("score").innerHTML}`);

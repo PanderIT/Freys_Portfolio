@@ -13,7 +13,6 @@ function generateGame() {
 
     //reset frame
     let frame = document.getElementById("gridFrame");
-    // frame.setAttribute("class", "gridframe");
     while (frame.lastChild) {
         frame.removeChild(frame.lastChild);
     }
@@ -24,6 +23,7 @@ function generateGame() {
     //determine y dimension
     let rows = (level + 5) % 2 === 0 ? (level + 5) / 2 : Math.round((level + 5) / 2);
 
+    //assign dimensions to Style sheet
     let style = document.createElement("style");
     style.innerHTML = `
     .grid {
@@ -35,12 +35,9 @@ function generateGame() {
     
     let ref = document.querySelector("script");
     ref.parentNode.insertBefore(style, ref);
+
     //generate grid dimensions
     let grid = document.createElement("div");
-    // grid.setAttribute("style", `grid-template-columns: repeat(${cols}, 80px)`);
-    // grid.setAttribute("style", `grid-template-rows: repeat(${rows}, 80px)`);
-    // grid.setAttribute("style", "grid-template-columns: repeat(3, 80px)");
-    // grid.setAttribute("style", "grid-template-rows: repeat(3, 80px)");
     grid.setAttribute("class", "grid");
     grid.setAttribute("id", "grid");
 
@@ -52,9 +49,10 @@ function generateGame() {
     let memoryCells = level + 2;
     document.getElementById("cells").innerHTML = memoryCells;
     
+    //determin fake cells
     let fakeCells = cells - memoryCells;
 
-    //generate array of mixed cells
+    //populate grid with fake cells
     for (let i = 0; i < fakeCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
@@ -65,6 +63,8 @@ function generateGame() {
         }, 1000);
         grid.appendChild(cell);
     }
+
+    //sudo-randomly populate grid with memory cells
     for (let i = 0; i < memoryCells; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
@@ -78,13 +78,15 @@ function generateGame() {
         let randomIndex = randomInt(grid.childNodes.length);
         grid.insertBefore(cell, randomChild);
     }
+
+    //send grid to gridframe to show on frontend.
     frame.appendChild(grid);
-    // frame.setAttribute("class", "gridframe spinning");
+
+    //Rotate grid 90 degrees
     grid.setAttribute("class", "grid spinning");
-    setTimeout(() => {
-        // frame.setAttribute("class", "gridframe");
-        grid.setAttribute("class", "grid");
-    }, 1000);
+    // setTimeout(() => {
+    //     grid.setAttribute("class", "grid");
+    // }, 1000);
 
     console.log(`level: ${level}`);
     console.log(`Current Score:  ${document.getElementById("score").innerHTML}`);

@@ -1,5 +1,4 @@
 function requestHighscores() {
-    console.log("HTTTTTTTTP");
 
     let xhttp = new XMLHttpRequest();
     let arr = [];

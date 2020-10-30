@@ -8,6 +8,7 @@ function requestHighscores() {
             arr = JSON.parse(this.responseText);
             console.log(JSON.parse(this.responseText));
             let i = 1;
+            showHighscores("Rank", "Name", "Score");
             arr.forEach(row => {
                 showHighscores(i, row["name"], row["score"]);
                 i += 1;
@@ -24,7 +25,7 @@ function showHighscores(place, name, score) {
     let p = document.createElement("div"); 
     let n = document.createElement("div"); 
     let s = document.createElement("div");
-    
+
     p.setAttribute("class", "col-4");
     p.innerHTML = place;
 

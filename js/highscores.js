@@ -1,5 +1,5 @@
 function getHighscores() {
-    console.log("Hello World");
+    console.log("HTTTTTTTTP");
 
     let xhttp = new XMLHttpRequest();
 

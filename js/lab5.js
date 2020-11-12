@@ -3,7 +3,7 @@ function saveDefinition() {
     let word = document.getElementById("word").value;
     let definition = document.getElementById("definition").value;
     console.log(word + ": " + definition);
-    xhttp.open("POST", `https://memorygamedbserver.herokuapp.com/addDefinition/${word}/10`, true);
+    xhttp.open("POST", `https://isadefinitionsserver.herokuapp.com/api/definitions/add/${word}/${definition}`, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -28,6 +28,6 @@ function getDefinition() {
             });
         }
     };
-    xhttp.open("GET", `https://memorygamedbserver.herokuapp.com/api/definitions`, true);
+    xhttp.open("GET", `https://isadefinitionsserver.herokuapp.com/api/definitions`, true);
     xhttp.send();
 }

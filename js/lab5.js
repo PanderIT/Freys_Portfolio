@@ -3,11 +3,11 @@ function saveDefinition() {
     let word = document.getElementById("word").value;
     let definition = document.getElementById("definition").value;
     console.log(word + ": " + definition);
-    xhttp.open("POST", `https://memorygamedbserver.herokuapp.com/addDefinition/${word}/${definition}`, true);
+    xhttp.open("POST", `https://memorygamedbserver.herokuapp.com/addDefinition/${word}/10`, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            console.log(this.responseText + "Helllooo");
         }
     };
 }

@@ -22,7 +22,7 @@ function getDefinition() {
             arr = JSON.parse(this.responseText);
             console.log(arr);
             arr.forEach(row => {
-                showDefinitions(row["word"], row["definition"]);
+                showDefinition(row["word"], row["definition"]);
             });
         }
     };

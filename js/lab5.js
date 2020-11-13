@@ -34,9 +34,14 @@ function showDefinition(word, definition) {
     let display = document.getElementById("display");
 
     let w = document.createElement("div");
-
+    let a = document.createElement("div");
+    let d = document.createElement("div");
+    a.setAttribute("class", "col-12");
+    d.setAttribute("class", "col-12");
     w.setAttribute("class", "col-12");
     w.innerHTML = word+": "+definition;
 
+    display.appendChild(a);
     display.appendChild(w);
+    display.appendChild(d);
 }

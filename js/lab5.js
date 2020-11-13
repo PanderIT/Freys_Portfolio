@@ -42,6 +42,6 @@ function showDefinition(word, definition) {
     d.setAttribute("class", "col-4");
     d.innerHTML = definition;
 
-    display.appendChild(p);
-    display.appendChild(n);
+    display.appendChild(w);
+    display.appendChild(d);
 }

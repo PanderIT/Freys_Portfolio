@@ -7,27 +7,41 @@ function saveDefinition() {
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText + "Helllooo");
         }
     };
 }
 
 function getDefinition() {
 
+    let search = document.getElementById("search").value;
+
     let xhttp = new XMLHttpRequest();
     let arr = [];
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             arr = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
-            let i = 1;
-            showHighscores("Rank", "Name", "Score");
+            console.log(arr);
             arr.forEach(row => {
-                showHighscores(i, row["name"], row["score"]);
-                i += 1;
+                showDefinitions(row["word"], row["definition"]);
             });
         }
     };
-    xhttp.open("GET", `https://isadefinitionsserver.herokuapp.com/api/definitions`, true);
+    xhttp.open("GET", `https://isadefinitionsserver.herokuapp.com/api/definitions/get/${search}`, true);
     xhttp.send();
+}
+
+function showDefinition(word, definition) {
+    let display = document.getElementById("display");
+
+    let w = document.createElement("div"); 
+    let d = document.createElement("div"); 
+
+    w.setAttribute("class", "col-4");
+    w.innerHTML = word;
+
+    d.setAttribute("class", "col-4");
+    d.innerHTML = definition;
+
+    display.appendChild(p);
+    display.appendChild(n);
 }

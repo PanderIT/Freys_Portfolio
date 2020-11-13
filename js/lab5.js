@@ -35,7 +35,7 @@ function showDefinition(word, definition) {
 
     let w = document.createElement("div");
 
-    w.setAttribute("class", "col-4");
+    w.setAttribute("class", "col-12");
     w.innerHTML = word+": "+definition;
 
     display.appendChild(w);

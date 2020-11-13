@@ -33,15 +33,10 @@ function getDefinition() {
 function showDefinition(word, definition) {
     let display = document.getElementById("display");
 
-    let w = document.createElement("div"); 
-    let d = document.createElement("div"); 
+    let w = document.createElement("div");
 
     w.setAttribute("class", "col-4");
-    w.innerHTML = word;
-
-    d.setAttribute("class", "col-4");
-    d.innerHTML = definition;
+    w.innerHTML = word+": "+definition;
 
     display.appendChild(w);
-    display.appendChild(d);
 }

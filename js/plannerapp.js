@@ -1,22 +1,22 @@
-const srch = document.getElementById("search");
-const t06 = document.getElementById("t06");
-const t07 = document.getElementById("t07");
-const t08 = document.getElementById("t08");
-const t09 = document.getElementById("t09");
-const t10 = document.getElementById("t10");
-const t11 = document.getElementById("t11");
-const t12 = document.getElementById("t12");
-const t13 = document.getElementById("t13");
-const t14 = document.getElementById("t14");
-const t15 = document.getElementById("t15");
-const t16 = document.getElementById("t16");
-const t17 = document.getElementById("t17");
-const t18 = document.getElementById("t18");
-const t19 = document.getElementById("t19");
-const t20 = document.getElementById("t20");
+let srch = document.getElementById("search");
+let t06 = document.getElementById("t06");
+let t07 = document.getElementById("t07");
+let t08 = document.getElementById("t08");
+let t09 = document.getElementById("t09");
+let t10 = document.getElementById("t10");
+let t11 = document.getElementById("t11");
+let t12 = document.getElementById("t12");
+let t13 = document.getElementById("t13");
+let t14 = document.getElementById("t14");
+let t15 = document.getElementById("t15");
+let t16 = document.getElementById("t16");
+let t17 = document.getElementById("t17");
+let t18 = document.getElementById("t18");
+let t19 = document.getElementById("t19");
+let t20 = document.getElementById("t20");
 
 function today() {
-    
+
 }
 
 function save() {

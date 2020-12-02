@@ -19,10 +19,3 @@ function next() {
 function search() {
     save();
 }
-
-$('#search').datepicker({
-    format: "dd/mm/yy",
-    calendarWeeks: true,
-    autoclose: true,
-    todayHighlight: true
-});

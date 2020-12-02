@@ -1,4 +1,4 @@
-const search = document.getElementById("search");
+const srch = document.getElementById("search");
 const t06 = document.getElementById("t06");
 const t07 = document.getElementById("t07");
 const t08 = document.getElementById("t08");
@@ -33,7 +33,7 @@ function search() {
     save();
 }
 
-search.addEventListener('keypress', function(e) {
+srch.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
       search();
     }

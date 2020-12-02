@@ -15,6 +15,10 @@ const t18 = document.getElementById("t18");
 const t19 = document.getElementById("t19");
 const t20 = document.getElementById("t20");
 
+function today() {
+    
+}
+
 function save() {
     console.log("hello World");
 }

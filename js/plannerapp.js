@@ -1,4 +1,10 @@
 let srch = document.getElementById("search");
+srch.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      search();
+    }
+})
+
 let t06 = document.getElementById("t06");
 let t07 = document.getElementById("t07");
 let t08 = document.getElementById("t08");
@@ -37,11 +43,7 @@ function search() {
     save();
 }
 
-srch.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      search();
-    }
-})
+
 
 t06.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {

@@ -6,6 +6,7 @@ function today() {
 
     today = mm + '/' + dd + '/' + yyyy;
     console.log(today);
+    document.getElementById("date").innerHTML = today;
 }
 
 function save() {
@@ -42,7 +43,7 @@ function save() {
     let t20 = document.getElementById("t20").value;
     if(t20 == "") {t20 = null}
     console.log(date);
-    
+
     xhttp.open("POST", `https://isa-planner.herokuapp.com/api/events/add/${date}/${t06}/${t07}/${t08}/${t09}/${t10}/${t11}/${t12}/${t13}/${t14}/${t15}/${t16}/${t17}/${t18}/${t19}/${t20}/`, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {

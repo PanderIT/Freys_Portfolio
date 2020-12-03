@@ -83,6 +83,16 @@ function next() {
 function search() {
     save();
     let date = document.getElementById("search").value;
+    clearEvents();
+    loadEvents(date);
+}
+
+function clearEvents() {
+
+}
+
+function loadEvents(date) {
+
     let xhttp = new XMLHttpRequest();
     let arr = [];
     xhttp.onreadystatechange = function () {
@@ -100,8 +110,4 @@ function search() {
     };
     xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/get/${date}`, true);
     xhttp.send();
-}
-
-function loadEvents() {
-
 }

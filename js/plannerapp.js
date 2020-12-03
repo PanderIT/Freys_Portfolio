@@ -98,7 +98,7 @@ function search() {
             });
         }
     };
-    xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/api/events/get/${date}`, true);
+    xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/get/${date}`, true);
     xhttp.send();
 }
 

@@ -7,23 +7,7 @@ function today() {
     today = mm + '-' + dd + '-' + yyyy;
     console.log(today);
     document.getElementById("date").innerHTML = today;
-    let xhttp = new XMLHttpRequest();
-    let arr = [];
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            arr = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
-            let i = 1;
-            // showHighscores("Rank", "Name", "Score");
-            arr.forEach(row => {
-                console.log(row);
-                // showHighscores(i, row["name"], row["score"]);
-                i += 1;
-            });
-        }
-    };
-    xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/api/events/get/${today}`, true);
-    xhttp.send();
+    loadEvents(today);
 }
 
 function save() {
@@ -81,14 +65,8 @@ function next() {
 }
 
 function search() {
-    save();
     let date = document.getElementById("search").value;
-    clearEvents();
     loadEvents(date);
-}
-
-function clearEvents() {
-
 }
 
 function loadEvents(date) {

@@ -6,6 +6,7 @@ function save() {
     let xhttp = new XMLHttpRequest();
     let date = document.getElementById("date").innerHTML;
     let t06 = document.getElementById("t06").value;
+    console.log(t06);
     let t07 = document.getElementById("t07").value;
     let t08 = document.getElementById("t08").value;
     let t09 = document.getElementById("t09").value;

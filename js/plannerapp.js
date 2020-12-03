@@ -98,16 +98,31 @@ function loadEvents(date) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             arr = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
-            let i = 1;
-            // showHighscores("Rank", "Name", "Score");
             arr.forEach(row => {
                 console.log(row);
-                // showHighscores(i, row["name"], row["score"]);
-                i += 1;
+                document.getElementById("date").innerHTML = row["date"];
+                document.getElementById("t06").innerHTML = checknull(row["t06"]);
+                document.getElementById("t07").innerHTML = checknull(row["t07"]);
+                document.getElementById("t08").innerHTML = checknull(row["t08"]);
+                document.getElementById("t09").innerHTML = checknull(row["t09"]);
+                document.getElementById("t10").innerHTML = checknull(row["t10"]);
+                document.getElementById("t11").innerHTML = checknull(row["t11"]);
+                document.getElementById("t12").innerHTML = checknull(row["t12"]);
+                document.getElementById("t13").innerHTML = checknull(row["t13"]);
+                document.getElementById("t14").innerHTML = checknull(row["t14"]);
+                document.getElementById("t15").innerHTML = checknull(row["t15"]);
+                document.getElementById("t16").innerHTML = checknull(row["t16"]);
+                document.getElementById("t17").innerHTML = checknull(row["t17"]);
+                document.getElementById("t18").innerHTML = checknull(row["t18"]);
+                document.getElementById("t19").innerHTML = checknull(row["t19"]);
+                document.getElementById("t20").innerHTML = checknull(row["t20"]);
             });
         }
     };
     xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/get/${date}`, true);
     xhttp.send();
+}
+
+function checknull(s) {
+    return (s === "null") ? "" : s;
 }

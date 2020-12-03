@@ -4,7 +4,7 @@ function today() {
 
 function save() {
     let xhttp = new XMLHttpRequest();
-    let date = document.getElementById("date").value;
+    let date = document.getElementById("date").innerHTML;
     let t06 = document.getElementById("t06").innerHTML;
     let t07 = document.getElementById("t07").innerHTML;
     let t08 = document.getElementById("t08").innerHTML;

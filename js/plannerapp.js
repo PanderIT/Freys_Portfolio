@@ -95,6 +95,23 @@ function loadEvents(date) {
                 document.getElementById("t19").value = checknull(row["t19"]);
                 document.getElementById("t20").value = checknull(row["t20"]);
             });
+        } else {
+            document.getElementById("date").innerHTML = date;
+            document.getElementById("t06").value = "";
+            document.getElementById("t07").value = "";
+            document.getElementById("t08").value = "";
+            document.getElementById("t09").value = "";
+            document.getElementById("t10").value = "";
+            document.getElementById("t11").value = "";
+            document.getElementById("t12").value = "";
+            document.getElementById("t13").value = "";
+            document.getElementById("t14").value = "";
+            document.getElementById("t15").value = "";
+            document.getElementById("t16").value = "";
+            document.getElementById("t17").value = "";
+            document.getElementById("t18").value = "";
+            document.getElementById("t19").value = "";
+            document.getElementById("t20").value = "";
         }
     };
     xhttp.open("GET", `https://isa-planner.herokuapp.com/api/events/get/${date}`, true);

@@ -55,25 +55,11 @@ function save() {
 }
 
 function previous() {
-    let date = document.getElementById("date").innerHTML;
-    console.log(date);
-    let mdy = date.split("-");
-    let mm = mdy[0];
-    let dd = mdy[1];
-    let yy = mdy[2];
-    var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
-    d.setDate(d.getDate() - 1);
-
-    dd = String(d.getDate()).padStart(2, '0');
-    mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
-    yy = d.getFullYear();
-
-    date = mm + '-' + dd + '-' + yy;
-    console.log(date);
+    incrementDate(-1);
 }
 
 function next() {
-    save();
+    incrementDate(1);
 
 }
 
@@ -136,5 +122,21 @@ function checknull(s) {
 }
 
 function incrementDate(i) {
+    let date = document.getElementById("date").innerHTML;
+    console.log(date);
+    let mdy = date.split("-");
+    let mm = mdy[0];
+    let dd = mdy[1];
+    let yy = mdy[2];
+    var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
+    let next = d.add(i).day();
+    console.log(next);
+    d.setDate(d.getDate() + i);
 
+    dd = String(d.getDate()).padStart(2, '0');
+    mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
+    yy = d.getFullYear();
+
+    date = mm + '-' + dd + '-' + yy;
+    console.log(date);
 }

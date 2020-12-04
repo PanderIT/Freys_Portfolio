@@ -125,10 +125,10 @@ function incrementDate(i) {
     let date = document.getElementById("date").innerHTML;
     console.log(date);
     let mdy = date.split("-");
-    let mm = mdy[0];
-    let dd = mdy[1];
-    let yy = mdy[2];
-    var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
+    let mm = parseInt(mdy[0]);
+    let dd = parseInt(mdy[1]);
+    let yy = parseInt(mdy[2]);
+    var d = new Date(yy, mm, dd);
     let output = d.toISOString();
     console.log(output);
     d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * i)

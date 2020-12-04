@@ -129,6 +129,9 @@ function incrementDate(i) {
     let dd = mdy[1];
     let yy = mdy[2];
     var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
+    console.log(d.getDay);
+    console.log(d.getMonth);
+    console.log(d.getFullYear);
     d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * i)
 
     dd = String(d.getDate()).padStart(2, '0');

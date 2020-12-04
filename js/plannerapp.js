@@ -55,12 +55,13 @@ function save() {
 }
 
 function previous() {
-    incrementDate(-1);
+    let date = incrementDate(-1);
+    loadEvents(date);
 }
 
 function next() {
-    incrementDate(1);
-
+    let date = incrementDate(1);
+    loadEvents(date);
 }
 
 function search() {
@@ -129,8 +130,6 @@ function incrementDate(i) {
     let dd = parseInt(mdy[1]);
     let yy = parseInt(mdy[2]);
     var d = new Date(yy, mm, dd);
-    let output = d.toISOString();
-    console.log(output);
     d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * i)
 
     dd = String(d.getDate()).padStart(2, '0');
@@ -139,4 +138,5 @@ function incrementDate(i) {
 
     date = mm + '-' + dd + '-' + yy;
     console.log(date);
+    return date;
 }

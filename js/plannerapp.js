@@ -68,7 +68,7 @@ function previous() {
     mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
     yy = d.getFullYear();
 
-    date = mm + '-' + dd + '-' + yyyy;
+    date = mm + '-' + dd + '-' + yy;
     console.log(date);
 }
 
@@ -133,4 +133,8 @@ function loadEvents(date) {
 
 function checknull(s) {
     return (s === "null") ? "" : s;
+}
+
+function incrementDate(i) {
+
 }

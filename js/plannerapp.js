@@ -129,12 +129,10 @@ function incrementDate(i) {
     let dd = mdy[1];
     let yy = mdy[2];
     var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
-    let next = d.add(i).day();
-    console.log(next);
     d.setDate(d.getDate() + i);
 
     dd = String(d.getDate()).padStart(2, '0');
-    mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
+    mm = String(d.getMonth()).padStart(2, '0'); //January is 0!
     yy = d.getFullYear();
 
     date = mm + '-' + dd + '-' + yy;

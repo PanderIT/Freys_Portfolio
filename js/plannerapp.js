@@ -95,7 +95,7 @@ function loadEvents(date) {
                 document.getElementById("t19").value = checknull(row["t19"]);
                 document.getElementById("t20").value = checknull(row["t20"]);
             });
-        } else {
+        } else if (date !== ""){
             document.getElementById("date").innerHTML = date;
             document.getElementById("t06").value = "";
             document.getElementById("t07").value = "";

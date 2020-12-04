@@ -127,7 +127,7 @@ function incrementDate(i) {
     let mdy = date.split("-");
     let mm = parseInt(mdy[0])-1;
     let dd = parseInt(mdy[1]);
-    let yy = parseInt(mdy[2])-1;
+    let yy = parseInt(mdy[2]);
     var d = new Date(yy, mm, dd);
     let output = d.toISOString();
     console.log(output);

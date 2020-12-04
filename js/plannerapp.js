@@ -78,7 +78,7 @@ function loadEvents(date) {
             arr = JSON.parse(this.responseText);
             arr.forEach(row => {
                 console.log(row);
-                console.log(checknull(row["t06"]));
+                console.log(checknull(row["t08"]));
                 document.getElementById("date").innerHTML = row["date"];
                 document.getElementById("t06").innerHTML = checknull(row["t06"]);
                 document.getElementById("t07").innerHTML = checknull(row["t07"]);

@@ -55,7 +55,16 @@ function save() {
 }
 
 function previous() {
-    save();
+    let date = document.getElementById("date").innerHTML;
+    let mdy = date.split("-");
+    console.log(mdy)
+    var lastDayOf2015 = new Date(2015, 11, 31);
+    snippet.log("Last day of 2015: " + lastDayOf2015.toISOString());
+    var nextDay = new Date(+lastDayOf2015);
+    var dateValue = nextDay.getDate() + 1;
+    snippet.log("Setting the 'date' part to " + dateValue);
+    nextDay.setDate(dateValue);
+    snippet.log("Resulting date: " + nextDay.toISOString());
 
 }
 

@@ -56,18 +56,20 @@ function save() {
 
 function previous() {
     let date = document.getElementById("date").innerHTML;
+    console.log(date);
     let mdy = date.split("-");
-    mm = mdy[0];
-    dd = mdy[1];
-    yy = mdy[2];
-    var lastDayOf2015 = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
-    console.log("Last day of 2015: " + lastDayOf2015.toISOString());
-    var nextDay = new Date(+lastDayOf2015);
-    var dateValue = nextDay.getDate() - 1;
-    console.log("Setting the 'date' part to " + dateValue);
-    nextDay.setDate(dateValue);
-    console.log("Resulting date: " + nextDay.toISOString());
+    let mm = mdy[0];
+    let dd = mdy[1];
+    let yy = mdy[2];
+    var d = new Date(parseInt(yy), parseInt(mm), parseInt(dd));
+    d.setDate(d.getDate() - 1);
 
+    dd = String(d.getDate()).padStart(2, '0');
+    mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
+    yy = d.getFullYear();
+
+    date = mm + '-' + dd + '-' + yyyy;
+    console.log(date);
 }
 
 function next() {
